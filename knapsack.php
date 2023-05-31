@@ -18,7 +18,7 @@ function knapsack($W, $wt_val, $N)
             // 品物iをナップサックに追加できる場合
             if ($wt_val[$i - 1][0] <= $w) {
                 $dp[$i][$w] = max(
-                    $wt_val[$i - 1][1] + $dp[$i - 1][$w - $wt_val[$i - 1][0]],
+                    $wt_val[$i - 1][1] + $dp[$i - 1][$w - $wt_val[$i - 1][0]], //品物重さ + (総重量-品物の重さ)
                     $dp[$i - 1][$w]
                 );
             } else {
