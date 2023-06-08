@@ -29,7 +29,7 @@ class DynamicProgrammingTest extends TestCase
         $N = 6;  //品物の個数
         $W = 15; //重さの総和
         $wt_val = [[2, 3], [1, 2], [3, 6], [2, 1], [1, 3], [5, 85]]; //品物の重さ_価値
-        $this->assertEquals(100, $dp->knapsack($W, $wt_val, $N));
+        $this->assertEquals(100, $dp->knapsack($W, $wt_val, $N)); //最大価値100
     }
 }
 
