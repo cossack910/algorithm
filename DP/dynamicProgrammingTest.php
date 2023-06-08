@@ -31,11 +31,6 @@ class DynamicProgrammingTest extends TestCase
         $wt_val = [[2, 3], [1, 2], [3, 6], [2, 1], [1, 3], [5, 85]]; //品物の重さ_価値
         $this->assertEquals(100, $dp->knapsack($W, $wt_val, $N));
     }
-
-    // public function testsectionDiv()
-    // {
-    //     $dp = new dynamicProgramming();
-    // }
 }
 
 // テスト
