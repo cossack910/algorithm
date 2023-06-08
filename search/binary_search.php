@@ -22,4 +22,4 @@ $arr = [3, 5, 8, 10, 14, 17, 21, 39];
 
 echo binarySearch($N, $arr, intval(fgets(STDIN)));
 
-//docker exec -it php8.1 php /var/www/php/algorithm/search/binary_search.php
+//docker exec -it php8.1 php /var/www/php-py/algorithm/search/binary_search.php

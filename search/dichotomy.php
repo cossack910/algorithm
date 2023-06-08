@@ -24,4 +24,4 @@ function binary_search($arr)
 $arr = [3, 5, 8, 19, 55, 76, 79, 100, 120]; //6
 
 echo binary_search($arr) . PHP_EOL;
-//docker exec -it php8.1 php /var/www/php/algorithm/search/dichotomy.php
+//docker exec -it php8.1 php /var/www/php-py/algorithm/search/dichotomy.php

@@ -20,4 +20,4 @@ for ($i = 0; $i < count($coins); $i++) {
 
 echo $result;
 
-//docker exec -it php8.1 php /var/www/php/algorithm/greedy/coin.php
+//docker exec -it php8.1 php /var/www/php-py/algorithm/greedy/coin.php
