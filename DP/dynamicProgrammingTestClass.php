@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 //絶対パス。。。。
 require_once "/var/www/php-py/algorithm/DP/dynamicProgrammingClass.php";
 
-class DynamicProgrammingTest extends TestCase
+class DynamicProgrammingTestClass extends TestCase
 {
     public function testMinCost()
     {
@@ -34,4 +34,4 @@ class DynamicProgrammingTest extends TestCase
 }
 
 // テスト
-// docker exec -it php8.1 /usr/local/bin/phpunit /var/www/php-py/algorithm/DP/dynamicProgrammingTest.php
+// docker exec -it php8.1 /usr/local/bin/phpunit /var/www/php-py/algorithm/DP/dynamicProgrammingTestClass.php
