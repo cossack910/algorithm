@@ -15,6 +15,13 @@ class GreedyTestClass extends TestCase
 
         $this->assertEquals(291, $gr->coin($MAX, $coins, $numbers_of_coins));
     }
+
+    public function testintervalScheduling()
+    {
+        $gr = new Greedy();
+        $intervals = [[3, 5], [2, 4], [7, 9], [1, 3]];
+        $this->assertEquals([[1, 3], [3, 5], [7, 9]], $gr->intervalScheduling($intervals));
+    }
 }
 
 // docker exec -it php8.1 /usr/local/bin/phpunit /var/www/php-py/algorithm/greedy/greedyTestClass.php
