@@ -16,11 +16,20 @@ class GreedyTestClass extends TestCase
         $this->assertEquals(291, $gr->coin($MAX, $coins, $numbers_of_coins));
     }
 
-    public function testintervalScheduling()
+    public function testIntervalScheduling()
     {
         $gr = new Greedy();
         $intervals = [[3, 5], [2, 4], [7, 9], [1, 3]];
         $this->assertEquals([[1, 3], [3, 5], [7, 9]], $gr->intervalScheduling($intervals));
+    }
+
+    public function testMultipleArray()
+    {
+        $gr = new Greedy();
+        $N = 5;
+        $a_arr = [1, 4, 5, 17, 9];
+        $b_arr = [3, 7, 5, 10, 9];
+        $this->assertEquals(11, $gr->multipleArray($N, $a_arr, $b_arr));
     }
 }
 

@@ -39,5 +39,26 @@ class Greedy
 
         return $selectedJobs;
     }
+
+    /**
+     * ボタンN-1を挿すと、a_arr[N-1]~a_arr[0]まですべての配列に１をたす
+     * ボタンN-2を挿すと、a_arr[N-2]~a_arr[0]まですべての配列に１をたす
+     */
+    public function multipleArray($N, $a_arr, $b_arr)
+    {
+        $sum = 0;
+        for ($i = $N - 1; $i >= 0; $i--) {
+            $a_arr[$i] += $sum;
+            $amari = $a_arr[$i] % $b_arr[$i];
+            $D = 0;
+            if ($amari != 0) {
+                $D = $b_arr[$i] - $amari;
+            }
+            $sum += $D;
+            print($D . PHP_EOL);
+        }
+        return $sum;
+    }
 }
+
 // docker exec -it php8.1 php /var/www/php-py/algorithm/greedy/greedyClass.php
