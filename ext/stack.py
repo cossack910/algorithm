@@ -21,14 +21,3 @@ class Stack:
         if self.isEmpty():
             return
         self.st.pop()
-
-
-test = Stack(10)
-test.stPush(1)
-print(test.st)
-test.stPush(100)
-print(test.st)
-test.stPop()
-print(test.st)
-
-# docker exec -it python3.10 python3 /var/www/php-py/algorithm//ext/stack.py

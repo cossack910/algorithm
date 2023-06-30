@@ -18,15 +18,3 @@ class Queue:
         if self.isEmpty():
             return
         self.st = self.st[1:]
-
-
-test = Queue(10)
-test.enQueue(23)
-test.enQueue(3)
-test.enQueue(33)
-test.enQueue(35)
-test.enQueue(2232)
-test.deQueue()
-print(test.st)
-
-# docker exec -it python3.10 python3 /var/www/php-py/algorithm//ext/queue.py
