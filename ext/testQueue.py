@@ -22,4 +22,4 @@ def test_queue():
     # Test isEmpty method after deQueue
     assert queue.isEmpty() is False  # 要素がまだあるので、isEmptyはFalseを返す
 
-# docker exec -it python3.10 pytest /var/www/php-py/algorithm//ext/testQueue.py
+# docker exec -it python3.10 pytest /var/www/php-py/algorithm/ext/testQueue.py
