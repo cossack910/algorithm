@@ -32,14 +32,4 @@ class Heap:
             i = child1
         self.heap[i] = x
 
-
-hp = [19, 12, 15, 10, 7, 6, 1, 3, 7, 5, 3, 2]
-# pu_test = Heap(hp)
-# pu_test.hpPush(17)
-# print(pu_test.heap)
-
-pop_test = Heap(hp)
-pop_test.hpPop()
-print(pop_test.heap)
-
 # docker exec -it python3.10 python3 /var/www/php-py/algorithm/ext/heap.py
