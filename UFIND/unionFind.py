@@ -6,8 +6,8 @@ class UnionFind:
     def root(self, x: int):
         if self.par[x] == -1:
             return x
-        else:
-            return self.par[x] == self.root(self.par[x])
+        self.par[x] = self.root(self.par[x])
+        return self.par[x]
 
     # 同じグループか
     def isSame(self, x: int, y: int):
@@ -37,13 +37,12 @@ uf.unite(1, 2)
 print(uf.par)
 print(uf.siz)
 uf.unite(2, 3)
-print(uf.par)
-print(uf.siz)
 uf.unite(5, 6)
-print(uf.isSame(1, 3))
-print(uf.isSame(2, 5))
+
 
 uf.unite(1, 6)
+print(uf.par)
+print(uf.siz)
 print(uf.isSame(2, 5))
 
 
