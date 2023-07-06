@@ -31,19 +31,4 @@ class UnionFind:
         self.siz[x] += self.siz[y]
         return True
 
-
-uf = UnionFind(7)
-uf.unite(1, 2)
-print(uf.par)
-print(uf.siz)
-uf.unite(2, 3)
-uf.unite(5, 6)
-
-
-uf.unite(1, 6)
-print(uf.par)
-print(uf.siz)
-print(uf.isSame(2, 5))
-
-
-# docker exec -it python3.10 python3 /var/www/php-py/algorithm/UFIND/unionFind.py
+# docker exec -it python3.10 python3 /var/www/php-py/algorithm/unionfind/unionFind.py
