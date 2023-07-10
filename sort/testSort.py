@@ -1,9 +1,9 @@
 import pytest
-from sort import Sort
+from sort import InsertSort
 
 
 def testInsertSort():
-    s = Sort()
+    s = InsertSort()
     SS = s.insertSort([4, 1, 3, 5, 2])
     assert SS == [1, 2, 3, 4, 5]
 
