@@ -71,4 +71,30 @@ class Sort:
         self.quickSort(left, i)
         self.quickSort(i+1, right)
 
+    def heapfy(self, i: int, N: int):
+        child1 = i * 2 + 1
+        if child1 >= N:
+            return
+
+        # 子供どうしを比較
+        if child1 + 1 < N and self.a[child1 + 1] > self.a[child1]:
+            child1 += 1
+
+        if self.a[child1] <= self.a[i]:
+            return
+
+        self.a[i], self.a[child1] = self.a[child1], self.a[i]
+
+        self.heapfy(child1, N)
+
+    def heapSort(self):
+        N = len(self.a)
+
+        for i in reversed(range(0, (N//2))):
+            self.heapfy(i, N)
+
+        for i in reversed(range(1, N)):
+            self.a[0], self.a[i] = self.a[i], self.a[0]
+            self.heapfy(0, i)
+
 # docker exec -it python3.10 python3 /var/www/php-py/algorithm/sort/sort.py
