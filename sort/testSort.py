@@ -29,4 +29,11 @@ def testHeapSort():
     s.heapSort()
     assert s.a == sorted(arr)
 
+
+def testbucketSort():
+    arr = [45, 7, 5, 88, 99, 23, 46, 73]
+    s = Sort(arr)
+    s.bucketSort()
+    assert s.a == sorted(arr)
+
 # docker exec -it python3.10 pytest /var/www/php-py/algorithm/sort/testSort.py

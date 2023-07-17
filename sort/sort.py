@@ -97,4 +97,23 @@ class Sort:
             self.a[0], self.a[i] = self.a[i], self.a[0]
             self.heapfy(0, i)
 
+    def bucketSort(self):
+        MAX_ = 100000
+        N = len(self.a)
+
+        num = [0]*MAX_
+        for i in range(0, N):
+            num[self.a[i]] += 1  # a[i]カウント
+
+        sum = [0]*MAX_
+        sum[0] = num[0]
+        for v in range(1, MAX_):
+            sum[v] = sum[v-1] + num[v]
+
+        a2 = [0]*N
+        for i in reversed(range(0, N)):
+            sum[self.a[i]] -= 1
+            a2[sum[self.a[i]]] = self.a[i]
+        self.a = a2
+
 # docker exec -it python3.10 python3 /var/www/php-py/algorithm/sort/sort.py
